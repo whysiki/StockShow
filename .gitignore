@@ -4,3 +4,5 @@
 /venv
 *.pyc
 **/*.pyc
+__pycache__/extract_data.cpython-312.pyc
+__pycache__/get_stock_data.cpython-312.pyc

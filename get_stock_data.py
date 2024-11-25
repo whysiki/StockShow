@@ -3,7 +3,8 @@ from typing import Dict, Tuple, Literal, Union, List
 from curl_cffi import requests
 import pandas as pd
 from datetime import datetime
-from rich import print
+
+# from rich import print
 from pathlib import Path
 import time
 
@@ -79,7 +80,7 @@ def save_decorator(
 
 
 # 腾讯分钟线
-@save_decorator(file_format=["yaml", "csv"])
+# @save_decorator(file_format=["yaml", "csv"])
 def get_price_min_tx(
     *, code: str, minute_frequency: int, count: int
 ) -> Tuple[Dict, pd.DataFrame]:
@@ -105,14 +106,14 @@ def get_price_min_tx(
     return raw_json, df
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    # 中国中免 sh601888
+#     # 中国中免 sh601888
 
-    # 南京商旅 sh600250
+#     # 南京商旅 sh600250
 
-    df1 = get_price_min_tx(**{"code": "sh601888", "minute_frequency": "1", "count": 0})[
-        1
-    ]
+#     df1 = get_price_min_tx(**{"code": "sh601888", "minute_frequency": "1", "count": 0})[
+#         1
+#     ]
 
-    print(df1)
+#     print(df1)

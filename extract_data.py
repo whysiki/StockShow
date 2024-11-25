@@ -1,6 +1,3 @@
-# from pathlib import Path
-
-
 def extract_data(data_dict: dict, stock_code: str):
     # 提取 m1 数据
     m1_data = data_dict["data"][stock_code]["m1"]
@@ -87,20 +84,20 @@ def extract_data(data_dict: dict, stock_code: str):
     )
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    from rich import print
-    from pathlib import Path
+#     from rich import print
+#     from pathlib import Path
 
-    data_dict_path = (
-        Path(__file__).parent / "data" / "sh601888_m1_count0_2024_11_26_1732558830.yaml"
-    )
+#     data_dict_path = (
+#         Path(__file__).parent / "data" / "sh601888_m1_count0_2024_11_26_1732558830.yaml"
+#     )
 
-    import yaml
+#     import yaml
 
-    data_dict = yaml.safe_load(data_dict_path.open("r", encoding="utf-8"))
+#     data_dict = yaml.safe_load(data_dict_path.open("r", encoding="utf-8"))
 
-    stock_code = "sh601888"
-    d = extract_data(data_dict, stock_code)
+#     stock_code = "sh601888"
+#     d = extract_data(data_dict, stock_code)
 
-    print(d)
+#     print(d)

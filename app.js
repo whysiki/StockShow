@@ -42,6 +42,10 @@ document.getElementById("queryButton").addEventListener("click", async () => {
   }
 });
 
+function enableChartFullscreen(chartDom, myChart) {
+  chartDom.addEventListener("click", () => {});
+}
+
 function drawIntradayChart(data) {
   const chartDom = document.getElementById("intradayChart");
   const myChart = echarts.init(chartDom);
@@ -93,16 +97,24 @@ function drawIntradayChart(data) {
         },
       },
     ],
+    dataZoom: [
+      {
+        type: "inside",
+        xAxisIndex: [0],
+        start: 0,
+        end: 100,
+      },
+      {
+        type: "slider",
+        xAxisIndex: [0],
+        start: 0,
+        end: 100,
+      },
+    ],
   };
 
   myChart.setOption(option);
-  myChart.on("click", () => {
-    myChart.dispatchAction({
-      type: "dataZoom",
-      start: 0,
-      end: 100,
-    });
-  });
+  enableChartFullscreen(chartDom, myChart);
 }
 
 function drawVolumeChart(data) {
@@ -148,16 +160,24 @@ function drawVolumeChart(data) {
         },
       },
     ],
+    dataZoom: [
+      {
+        type: "inside",
+        xAxisIndex: [0],
+        start: 0,
+        end: 100,
+      },
+      {
+        type: "slider",
+        xAxisIndex: [0],
+        start: 0,
+        end: 100,
+      },
+    ],
   };
 
   myChart.setOption(option);
-  myChart.on("click", () => {
-    myChart.dispatchAction({
-      type: "dataZoom",
-      start: 0,
-      end: 100,
-    });
-  });
+  enableChartFullscreen(chartDom, myChart);
 }
 
 function drawDailyChart(data) {
@@ -212,16 +232,24 @@ function drawDailyChart(data) {
         },
       },
     ],
+    dataZoom: [
+      {
+        type: "inside",
+        xAxisIndex: [0],
+        start: 0,
+        end: 100,
+      },
+      {
+        type: "slider",
+        xAxisIndex: [0],
+        start: 0,
+        end: 100,
+      },
+    ],
   };
 
   myChart.setOption(option);
-  myChart.on("click", () => {
-    myChart.dispatchAction({
-      type: "dataZoom",
-      start: 0,
-      end: 100,
-    });
-  });
+  enableChartFullscreen(chartDom, myChart);
 }
 
 function displayStockDetails(details) {
