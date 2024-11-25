@@ -644,5 +644,3 @@ python main.py
 * sh600250
 
 ![1732568663602](image/prompt/1732568663602.png)
-
-![1732568653318](image/prompt/1732568653318.png)
