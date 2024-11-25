@@ -20,9 +20,6 @@ def open_index_html():
 
 
 if __name__ == "__main__":
-    # 示例数据
-    # # 中国中免 sh601888
 
-    # # 南京商旅 sh600250
     open_index_html()  # 打开 index.html 文件
     app.run(debug=False, port=5000, use_reloader=False)  # 启动 Flask 应用
