@@ -1,1 +1,6 @@
 /others
+/__pycache__
+/data
+/venv
+*.pyc
+**/*.pyc
